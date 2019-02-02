@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>bargraph suicides</title>
+  </head>
+
+  <body>
+    <h1>Suicide Rates</h1>
+    <h3>Overview 1985 to 2016</h3>
+
+    <div id="suicides">
+    </div>
+    <h1>Suicides</h1>
+
+    <div id="country">
+    </div>
+
+    <script>
+      var h1 = d3.select("h1");
+      h1.style("color","red")
+        .style("font-size","30px")
+        .style("font-weight","bold");
+
+      var h3 = d3.select("h3");
+        h3.style("color","blue")
+          .style("font-size","20px")
+          .style("font-weight","bold");
+
+        //total de victimas de violencia en CDMX en 2018 por mes
+        // var data = [10,20,80,230,40,130,50,90,22,5,50];
+        //var x = 0;
+        //primero debemos seleccionar el elemento
+        //d3.select("body")
+        //  .append("svg")
+        //    .attr("width","1000")
+        //    .attr("height","500")
+        //  .append("g")
+        //    .selectAll("rect")
+        //    .data(data)
+        //    .enter(data)
+        //  .append("rect")
+        //    .attr("x",function(d) {x = x + 40; return x;})
+        //    .attr("y",function(d) {return (500 - d)-40;})
+        //    .attr("width","30")
+        //    .attr("height",function(dato) {return dato; })
+        //    .style("fill","blue");
+
+            //leer datos separados por ","
+          d3.dsv(",", "master.csv")
+            .then(function(data) {
+                //Suicides
+                var suicidesN = [];
+                var age = [];
+                var sex = [];
+                var country = [];
+                var max = 0;
+                //
+                for(var i=0; i<20000; i++){
+                  //if (data[i].country == "Mexico" ||  data.country == "Japan") {
+                  if (data[i].country == "Mexico") {
+                    suicidesN.push(data[i].suicides_no);
+                    age.push(data[i].age);
+                    sex.push(data[i].sex);
+                    country.push(data[i].country);
+                    if (data[i].suicides_no > max)  max = data[i].suicides_no;
+                    console.log(data[i].suicides_no);
+                  }
+                }
+                console.log("-----------------------");
+                console.log(max);
+
+                var x = 0;
+                //primero debemos seleccionar el elemento
+                d3.select("body")
+                  .append("svg")
+                    .attr("width","2000")
+                    .attr("height","500")
+                  .append("g")
+                    .selectAll("rect")
+                    .data(suicidesN)
+                    .enter(data)
+                  .append("rect")
+                    .attr("x",function(d) {x = x + 40; return x;})
+                    .attr("y",function(d) {return d;})
+                    .attr("width","30")
+                    .attr("height",function(dato) {return dato; })
+                    .style("fill","red");
+              });
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Suicide-rates-overview-1985to2016</title>
+  </head>
+
+  <body class="mainshape">
+    <nav class="navbar navbar-light d-flex flex-row justify-content-start">
+      <p class="navbar-brand mb-0 ml-4"> Suicide-rates-overview 1985 to 2016 Dashboard</p>
+    </nav>
+
+    <div id="shape" class="container-fluid">
+
+      <div id="Issuehead1" class="container d-flex justify-content-left align-items-center">
+        <img src="indice.png" class="d-inline-block align-center img-fluid"
+            alt="logo firebase" width="30px" height="30px">
+          <p>Firebase Crashlytics > Overview</p>
+      </div>
+
+      <div id="Issuehead2" class="container">
+            <p><b>Crash trends</b></p>
+      </div>
+
+      <div id="Crashtrends" class="container">
+        <div class="row">
+          <div id="Trends" class="col-3">
+            <table class="table table3">
+                <thead class="headerRow">
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Events</td>
+                    </tr>
+                    <tr>
+                      <td>11,632</td>
+                    </tr>
+                    <tr>
+                        <td>-30.8%</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Users</td>
+                    </tr>
+                    <tr>
+                        <td>7,370</td>
+                    </tr>
+                    <tr>
+                        <td>-17.6%</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <div id="Trends" class="col-3">
+            <svg id="bargraph">
+            </svg>
+          </div>
+
+        </div>
+      </div>
+
+    <div id="Crashes" class="container">
+      <div class="row">
+
+        <div id="Crashesversion" class="col-4">
+          <table class="table table1">
+              <thead class="headerRow">
+                  <tr>
+                      <th></th>
+                      <th>Version</th>
+                      <th>Events</th>
+                      <th>Users</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1.</td>
+                      <td>2.63</td>
+                      <td>10,817</td>
+                      <td>7,059</td>
+                  </tr>
+                  <tr>
+                      <td>2.</td>
+                      <td>2.62</td>
+                      <td>815</td>
+                      <td>788</td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+
+        <div id="Crashesdevice" class="col-4">
+          <table class="table table1">
+              <thead class="headerRow">
+                  <tr>
+                      <th></th>
+                      <th>Device Model</th>
+                      <th>Events</th>
+                      <th>Users</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>1.</td>
+                      <td>ONEPLUS A3003</td>
+                      <td>4,208</td>
+                      <td>3,531</td>
+                  </tr>
+                  <tr>
+                      <td>2.</td>
+                      <td>Mi A1</td>
+                      <td>3,257</td>
+                      <td>2,824</td>
+                  </tr>
+                  <tr>
+                      <td>3.</td>
+                      <td>Pixel 2 XL</td>
+                      <td>2,316</td>
+                      <td>2,090</td>
+                  </tr>
+                  <tr>
+                      <td>4.</td>
+                      <td>Pixel 2</td>
+                      <td>1,421</td>
+                      <td>1,339</td>
+                  </tr>
+                  <tr>
+                      <td>5.</td>
+                      <td>SM-G950F</td>
+                      <td>430</td>
+                      <td>422</td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+
+        <div id="Crashesopersys" class="col-4">
+          <table class = "table table1">
+              <thead class="headerRow">
+                  <tr>
+                      <th></th>
+                      <th>Operating System</th>
+                      <th>Events</th>
+                      <th>Users</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>1.</td>
+                      <td>9</td>
+                      <td>4,153</td>
+                      <td>3,472</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                      <td>7.1.1</td>
+                      <td>3,276</td>
+                      <td>2,848</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                      <td>8.1.0</td>
+                      <td>2,334</td>
+                      <td>2,099</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                      <td>7.0</td>
+                      <td>1,412</td>
+                      <td>1,320</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                      <td>8.0.0</td>
+                      <td>457</td>
+                      <td>444</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="Issuehead" class="container">
+          <p><b>Issue list</b></p>
+    </div>
+
+    <div id="Issuelist" class="container">
+      <div class="row">
+
+        <div id="list1" class="col-4">
+          <table class="table table2">
+              <thead class="headerRow">
+                  <tr>
+                      <th></th>
+                      <th>Issue</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>1.</td>
+                      <td>FloodItActivity.java - line 662</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                      <td>FloodItBillingService.java - line 125</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                      <td>AdHelper.java - line 111</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                      <td>ExtraStepsActivity.java - line 145</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                      <td>ProgressiveMode.java - line 20</td>
+                  </tr>
+                  <tr>
+                    <td>6.</td>
+                      <td>FloodItActivity.java - line 145</td>
+                  </tr>
+              </tbody>
+        </table>
+      </div>
+
+      <div id="list2" class="col-4">
+        <table class="table table2">
+            <thead class="headerRow">
+                <tr>
+                    <th>Blame Frame</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>com.labpixies.flood.FloodItActivity.shouldShowInterstitialAd</td>
+                </tr>
+                <tr>
+                  <td>com.labpixies.flood.FloodItBillingService.getAvailableSkuDetailsOrNull</td>
+                </tr>
+                <tr>
+                  <td>com.labpixies.flood.AdHelper.populateAppInstallAdView</td>
+                </tr>
+                <tr>
+                  <td>com.labpixies.flood.ExtraStepsActivity.setUpPackage</td>
+                </tr>
+                <tr>
+                  <td>com.labpixies.flood.ProgressiveMode.getLevel</td>
+                </tr>
+                <tr>
+                  <td>com.labpixies.flood.FloodItActivity.onCreate</td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div id="list3" class="col-4">
+        <table class="table table2">
+            <thead class="headerRow">
+                <tr>
+                    <th>Version</th>
+                    <th>Events</th>
+                    <th>Users</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>2.63</td>
+                  <td>5,959</td>
+                  <td>4,634</td>
+                </tr>
+                <tr>
+                  <td>2.63</td>
+                  <td>4,151</td>
+                  <td>3,483</td>
+                </tr>
+                <tr>
+                  <td>2.63</td>
+                  <td>606</td>
+                  <td>594</td>
+                </tr>
+                <tr>
+                  <td>2.62</td>
+                  <td>506</td>
+                  <td>497</td>
+                </tr>
+                <tr>
+                  <td>2.62</td>
+                  <td>309</td>
+                  <td>306</td>
+                </tr>
+                <tr>
+                  <td>2.63</td>
+                  <td>101</td>
+                  <td>101</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+      </div>
+    </div>
+
+    </div>
+
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,500,700');
+
+      nav.navbar{
+        height: 60px;
+        width: 100%;
+        padding: 0px;
+        background-color: #4285F4;
+        border-bottom: 1px solid;
+      }
+      .navbar-brand {
+        font-family: 'roboto', sans-serif;
+        color: white !important;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .mainshape{
+        background-color: #EEEEEE;
+      }
+      #shape{
+        position: absolute;
+        background-color: #EEEEEE;
+        padding-top: 40 px;
+        padding-bottom: 40 px;
+        padding-left: 40 px;
+        padding-right: 40 px;
+        margin-top: 20px;
+        border-radius: 4px;
+      }
+      #Issuelist, #Crashes, #Crashtrends{
+         /*Contenedor de los rows   */
+          height: 400px;
+          min-height: 400px;
+          font-size: 14px;
+          background-color: #eeeeee;
+          color: #434343;
+          padding-left: 0px;
+          padding-right: 0px;
+          border-left: 0px;
+          border-right: 0px;
+      }
+      .headerRow{
+        height: 26px;
+        font-family: 'roboto', sans-serif;
+        color: rgb(239, 239, 239) !important;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 14px;
+        background-color: rgb(3, 155, 224);
+      }
+      #Issuehead1{
+        /* Contenedor de encabezado de tablas  */
+        margin-left: : 0;
+        margin-right: : 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
+        height: 40px;
+        min-height: 40px;
+        font-family: 'roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        background-color: #039BE5;
+      }
+      #Issuehead, #Issuehead2{
+        /* Contenedor de encabezado de tablas  */
+        margin-left: : 0;
+        margin-right: : 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
+        height: 40px;
+        min-height: 40px;
+        font-family: 'roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #666666;
+        background-color: #ffffff;
+        border-radius: 4px;
+      }
+      .table1{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-right: 10px;
+        border: solid transparent;
+        background-color: #ffffff;
+        border-radius: 4px;
+        /*  height: 370px;  */
+        }
+      .table2{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: solid transparent;
+        background-color: #ffffff;
+        border-radius: 4px;
+        /* height: 450px;  */
+        }
+        .table3{
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: solid transparent;
+          background-color: #ffffff;
+          border-radius: 4px;
+          /* height: 450px;  */
+          }
+          #bargraph{
+            background-color: #eeeeee;
+            width: 1000px;
+            height: 260px;
+            style: overflow;
+          }
+    </style>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
